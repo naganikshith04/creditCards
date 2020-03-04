@@ -25,8 +25,8 @@ function fun(){
   var finalSkew1 = options2;
   
   let path =`./MVSR/${final}.png`
-  let path1 =  `./MVSR/${finalSkew}.png`
-  let path2 =  `./MVSR/${finalSkew1}.png`
+  let path1 =  `./${finalSkew}.png`
+  let path2 =  `./${finalSkew1}.png`
   console.log(path);
   var images = document.getElementById("img");
   images.innerHTML = `<img src=${path} class="img-fluid m-5" height="300px" width="300px" alt="Responsive image"> + <img src=${path1} class="img-fluid m-5" height="500px" width="400px" alt="Responsive image"> +<img src=${path2} class="img-fluid m-5" height="500px" width="400px" alt="Responsive image">   `;
