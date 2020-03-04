@@ -7,7 +7,6 @@ function render(){
 }
 }
 function selectOptions(con){
-    //let url='img/vegetable/vegetable${con}.jpg';
     return `
    <option value="X${con}">X${con}</option>
 `
@@ -17,14 +16,18 @@ function selectOptions(con){
 
 function fun(){
   var options = document.getElementById("inlineFormCustomSelect").value;
-  var options2 = document.getElementById("inlineFormCustomSelect").value;
+  var options2 = document.getElementById("inlineFormCustomSelec").value;
+  console.log(options)
+  console.log(options2)
   var final = options+"-"+options2;
   console.log(final);
+  var finalSkew = options;
+  var finalSkew1 = options2;
+  
   let path =`./MVSR/${final}.png`
-  // return`
-  // <img src=${path} class="img-fluid" alt="Responsive image">
-  // `
+  let path1 =  `./MVSR/${finalSkew}.png`
+  let path2 =  `./MVSR/${finalSkew1}.png`
   console.log(path);
   var images = document.getElementById("img");
-  images.innerHTML += `<img src=${path} class="img-fluid m-5" height="300px" width="300px" alt="Responsive image">`;
+  images.innerHTML = `<img src=${path} class="img-fluid m-5" height="300px" width="300px" alt="Responsive image"> + <img src=${path1} class="img-fluid m-5" height="500px" width="400px" alt="Responsive image"> +<img src=${path2} class="img-fluid m-5" height="500px" width="400px" alt="Responsive image">   `;
 }
